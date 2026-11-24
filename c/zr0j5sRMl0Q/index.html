@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="vi"><head><meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer"><script>window.STATIC_CARD={"title": "Happy birthday", "to": "Test", "wish": "By:ploc", "from": "By:builoc", "photos": ["3251c789f2edef26.jpg", "7d18c5aea7c20fd5.jpg", "34a0001e30e5fda3.jpg"]};window.PHOTO_BASE="p/";</script><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>Chúc mừng sinh nhật</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}
+html,body{height:100%;overflow:hidden;background:#07040c;color:#fff;font-family:Georgia,'Noto Serif',serif;
+  -webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none;touch-action:manipulation}
+canvas{position:fixed;inset:0;width:100%;height:100%}
+#cf{pointer-events:none}
+#msg{position:fixed;inset:0;display:none;align-items:center;justify-content:center;text-align:center;padding:30px;
+  font-size:18px;color:#ffd36a;z-index:9}
+#card{position:fixed;left:50%;top:0;transform:translate(-50%,-50%) scale(.82) rotate(-5deg);opacity:0;pointer-events:none;
+  transition:opacity .9s,transform .9s cubic-bezier(.2,1.3,.4,1);z-index:3}
+#card.on{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(0);pointer-events:auto}
+#paper{position:relative;width:100%;height:100%;padding:40px 30px 50px;border-radius:14px;display:flex;flex-direction:column;
+  text-align:center;color:#6b3f55;transform:rotate(-1deg);
+  background:radial-gradient(#ffc7d8 1.1px,transparent 1.5px) 0 0/17px 17px,linear-gradient(160deg,#fffaf0,#ffeaf1);
+  box-shadow:0 14px 44px rgba(255,170,60,.38),0 0 0 1px rgba(255,255,255,.6) inset}
+#paper::before{content:'';position:absolute;inset:9px;border:2px dashed #ffaac4;border-radius:10px;pointer-events:none}
+.tape{position:absolute;top:-11px;width:76px;height:23px;z-index:4;opacity:.92;box-shadow:0 1px 3px rgba(0,0,0,.25);
+  background:repeating-linear-gradient(45deg,#ffd36a 0 8px,#fff 8px 16px)}
+.tape.a{left:16px;transform:rotate(-17deg)}.tape.b{right:16px;transform:rotate(15deg);
+  background:repeating-linear-gradient(-45deg,#ff9fbe 0 8px,#fff 8px 16px)}
+.dd{position:absolute;pointer-events:none;transform:rotate(var(--r,0deg));animation:bob 3.4s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-5px) rotate(var(--r,0deg))}}
+#cHead,#cText,#cSig{position:relative;z-index:2}
+#cHead{font:600 28px 'Dancing Script','Patrick Hand',cursive;color:#ff5f95;margin-bottom:8px;line-height:1.1}
+#cText{flex:1;min-height:0;overflow:hidden;display:flex;align-items:center;justify-content:center;
+  font-family:'Patrick Hand','Segoe Print','Bradley Hand','Noto Sans',sans-serif;line-height:1.35;color:#6b3f55}
+#cT{white-space:pre-wrap;word-break:break-word;width:100%}
+#cSig{margin-top:6px;font:600 22px 'Dancing Script','Patrick Hand',cursive;color:#ff5f95;opacity:0;transition:opacity .8s;text-align:right;padding-right:8px}
+#ui{position:fixed;bottom:2.5vh;width:100%;display:flex;justify-content:center;gap:10px;z-index:4}
+button{background:rgba(255,255,255,.08);border:1px solid rgba(255,214,10,.5);color:#ffd60a;
+  padding:8px 16px;border-radius:999px;font:13px Georgia,serif}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="s-heart" viewBox="0 0 24 24"><path fill="currentColor" d="M12 21C5 16 2 12 2 8.5A4.5 4.5 0 0 1 12 6a4.5 4.5 0 0 1 10 2.5C22 12 19 16 12 21z"/></symbol>
+<symbol id="s-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.8-6.3 3.8 1.7-7L2 9.2l7.1-.6z"/></symbol>
+<symbol id="s-spark" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1c.8 5.5 3.5 9.2 11 11-7.5 1.8-10.2 5.5-11 11-.8-5.5-3.5-9.2-11-11 7.5-1.8 10.2-5.5 11-11z"/></symbol>
+<symbol id="s-balloon" viewBox="0 0 24 30"><ellipse cx="12" cy="10" rx="8" ry="9.5" fill="currentColor"/><ellipse cx="9" cy="6.5" rx="2" ry="3" fill="#fff" opacity=".45"/><path d="M12 19.5l-2.2 2.8h4.4z" fill="currentColor"/><path d="M12 22.5c-2.5 2 2.5 3.5 0 6.5" stroke="currentColor" fill="none" stroke-width="1.2"/></symbol>
+<symbol id="s-flower" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="12" cy="6" r="4.2"/><circle cx="18" cy="10.4" r="4.2"/><circle cx="15.7" cy="17.5" r="4.2"/><circle cx="8.3" cy="17.5" r="4.2"/><circle cx="6" cy="10.4" r="4.2"/></g><circle cx="12" cy="12" r="3.2" fill="#ffd36a"/></symbol>
+<symbol id="s-cake" viewBox="0 0 24 24"><rect x="3" y="14" width="18" height="7" rx="2" fill="currentColor"/><rect x="6" y="9.5" width="12" height="5" rx="2" fill="#fff" opacity=".92"/><rect x="11" y="4.8" width="2" height="4.7" fill="#ffd36a"/><path d="M12 1.2c1.4 1.4 1.4 2.8 0 3.6-1.4-.8-1.4-2.2 0-3.6z" fill="#ff9a3c"/></symbol>
+</defs></svg>
+<canvas id="cp"></canvas><canvas id="cf"></canvas>
+<div id="msg"></div>
+<div id="card"><div id="paper">
+  <i class="tape a"></i><i class="tape b"></i>
+  <svg class="dd" style="left:20px;top:24px;width:28px;height:28px;color:#ff7aa5;--r:-12deg"><use href="#s-heart"/></svg>
+  <svg class="dd" style="right:24px;top:26px;width:26px;height:26px;color:#ffc93c;--r:14deg;animation-delay:-.8s"><use href="#s-star"/></svg>
+  <svg class="dd" style="left:12px;bottom:18px;width:34px;height:42px;color:#7fd8c3;--r:-8deg;animation-delay:-1.4s"><use href="#s-balloon"/></svg>
+  <svg class="dd" style="right:16px;bottom:16px;width:40px;height:40px;color:#ff8fb1;--r:7deg;animation-delay:-2s"><use href="#s-cake"/></svg>
+  <svg class="dd" style="left:4px;top:44%;width:22px;height:22px;color:#b79cff;--r:10deg;animation-delay:-.4s"><use href="#s-flower"/></svg>
+  <svg class="dd" style="right:5px;top:38%;width:20px;height:20px;color:#ffb38a;--r:-10deg;animation-delay:-1.1s"><use href="#s-heart"/></svg>
+  <svg class="dd" style="left:46%;bottom:10px;width:16px;height:16px;color:#ffc93c;animation-delay:-1.7s"><use href="#s-spark"/></svg>
+  <svg class="dd" style="left:30%;top:14px;width:14px;height:14px;color:#ff9fbe;animation-delay:-.2s"><use href="#s-spark"/></svg>
+  <div id="cHead"></div>
+  <div id="cText"><div id="cT"><span id="cTs"></span><span id="cTr" style="visibility:hidden"></span></div></div>
+  <div id="cSig"></div>
+</div></div>
+<div id="ui"><button id="again" style="display:none">Xem lại</button></div>
+<script>
+const $ = id => document.getElementById(id), rnd = Math.random, PI = Math.PI, TAU = PI*2;
+const clamp = (v, a, b) => v < a ? a : (v > b ? b : v);
+const easeOut = p => 1 - Math.pow(1 - p, 3);
+const easeBack = p => 1 + 2.5*Math.pow(p - 1, 3) + 1.5*Math.pow(p - 1, 2);
+const cp = $('cp'), cf = $('cf'), px = cp.getContext('2d'), fx = cf.getContext('2d');
+const N = (navigator.hardwareConcurrency || 4) >= 6 ? 12000 : 8500, KQ = N/4600, Q = n => Math.round(n*KQ), MAXPH = 20;
+let W, H, D, cy, F, PW, PH, img, buf, base, cardW = 300, cardH = 300;
+let CFG = {title:'Happy birthday', to:'', wish:'', from:'', photos:[]};
+let SC = [], BX = {}, CAKE = {}, PTG = [], RING = {n:0}, frames = [], T3 = 5, DT = .9, PIV = [0,0,0,0,0];
+const P = new Float32Array(N*3), CC = new Float32Array(N*3), FXC = new Float32Array(N),
+      R2 = new Float32Array(N), PHs = new Float32Array(N), LIDX = new Int32Array(N).fill(-1);
+for(let i=0;i<N;i++){ R2[i] = rnd(); PHs[i] = rnd()*TAU; }
+let CS = 1, SN = 0, CT = 1, ST = 0;
+const LAUNCH0 = 1.5, FLY = 1.7, RINGW = .35, LID_OPEN = 1.95;
+
+const gold = () => [255, 185+rnd()*55, 55+rnd()*70];
+const red  = () => [225+rnd()*30, 14+rnd()*26, 26+rnd()*28];
+const yel  = () => [255, 200+rnd()*45, 45+rnd()*50];
+
+// ---------- dựng các "cảnh": mỗi cảnh cho mỗi hạt một vị trí và màu đích ----------
+function Sc(){ return {T:new Float32Array(N*3), C:new Float32Array(N*3), F:new Uint8Array(N), K:new Uint8Array(N), n:0}; }
+function put(S, x, y, z, c, fixed, kind){
+  const i = S.n; if(i >= N) return false;
+  const o = i*3; S.T[o]=x; S.T[o+1]=y; S.T[o+2]=z; S.C[o]=c[0]; S.C[o+1]=c[1]; S.C[o+2]=c[2];
+  S.F[i] = fixed ? 1 : 0; S.K[i] = kind || 0; S.n++; return true;
+}
+function dust(S, kind){
+  while(S.n < N){
+    const a = rnd()*TAU, r = .3 + .7*Math.sqrt(rnd());
+    put(S, Math.cos(a)*r*W*.62, (rnd()-.5)*H*.92, Math.sin(a)*r*W*.5, [255, 215+rnd()*40, 150+rnd()*70], 0, kind || 2);
+  }
+  return S;
+}
+function sampleText(str, maxW, maxFont, maxH, cap){
+  const c = document.createElement('canvas'), g = c.getContext('2d');
+  const words = String(str).trim().split(/\s+/), font = s => `italic 700 ${s}px Georgia,'Noto Serif',serif`;
+  let fs = maxFont, lines = [];
+  for(; fs >= 14; fs -= 2){
+    g.font = font(fs); lines = []; let cur = '';
+    for(const w of words){
+      const t = cur ? cur + ' ' + w : w;
+      if(!cur || g.measureText(t).width <= maxW) cur = t; else { lines.push(cur); cur = w; }
+    }
+    lines.push(cur);
+    if(lines.every(l => g.measureText(l).width <= maxW) && lines.length*fs*1.2 <= maxH) break;
+  }
+  if(fs < 14) fs = 14;
+  const lh = fs*1.2, cw = Math.ceil(maxW + 20), ch = Math.ceil(lines.length*lh + 20);
+  c.width = cw; c.height = ch; g.font = font(fs); g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillStyle = '#fff';
+  lines.forEach((l, i) => g.fillText(l, cw/2, 10 + lh*(i + .5)));
+  const d = g.getImageData(0, 0, cw, ch).data, pts = [], stp = N > 10000 ? 1.1 : 1.4;
+  for(let y=0; y<ch; y+=stp) for(let x=0; x<cw; x+=stp){
+    const xi = x|0, yi = y|0;
+    if(d[(yi*cw + xi)*4 + 3] > 140) pts.push([xi - cw/2 + (rnd()-.5)*.9, -(yi - ch/2) + (rnd()-.5)*.9]);
+  }
+  for(let i=pts.length-1; i>0; i--){ const j = (rnd()*(i+1))|0; [pts[i], pts[j]] = [pts[j], pts[i]]; }
+  return pts.slice(0, cap);
+}
+
+function buildTitle(){
+  const S = Sc(), pts = sampleText(CFG.title || 'Happy birthday', W*.9, Math.min(W*.3, H*.14), H*.36, Math.floor(N*.7));
+  for(const p of pts) put(S, p[0], p[1] + H*.03, 0, gold(), 1);
+  return dust(S);
+}
+
+function rrPoint(w, h, r){
+  const sx = 2*(w - r), sy = 2*(h - r), arc = PI*r/2, tot = 2*sx + 2*sy + 4*arc;
+  let t = rnd()*tot;
+  if(t < sx) return [-w + r + t, h]; t -= sx;
+  if(t < sy) return [w, h - r - t]; t -= sy;
+  if(t < sx) return [w - r - t, -h]; t -= sx;
+  if(t < sy) return [-w, -h + r + t]; t -= sy;
+  const q = Math.min(3, (t/arc)|0), a = (t - q*arc)/r;
+  const cx0 = [w-r, -w+r, -w+r, w-r][q], cy0 = [h-r, h-r, -h+r, -h+r][q], a0 = q*PI/2;
+  return [cx0 + r*Math.cos(a0 + a), cy0 + r*Math.sin(a0 + a)];
+}
+function buildCard(){
+  const S = Sc(), w = cardW/2 + 6, h = cardH/2 + 6;
+  for(let i=0; i<Q(1500); i++){
+    const p = rrPoint(w, h, 18), g = rnd();
+    put(S, p[0] + (rnd()-.5)*2.4, p[1] + (rnd()-.5)*2.4, 0, [255, 190 + g*55, 90 + g*100], 1);
+  }
+  for(let c=0; c<4; c++) for(let k=0; k<Q(10); k++)
+    put(S, (c%3 ? -1 : 1)*(w + 6 + rnd()*12), (c<2 ? 1 : -1)*(h + 6 + rnd()*12), 0, [255, 240, 200], 1);
+  for(let i=0; i<Q(500); i++) put(S, (rnd()*2-1)*(w-8), (rnd()*2-1)*(h-8), 0, [255, 170 + rnd()*60, 190 + rnd()*50], 1, 2);
+  return dust(S);
+}
+
+// ---------- hộp quà: thân hộp cố định + nắp quay quanh bản lề phía sau ----------
+function makeBox(){
+  const s = Math.min(W*.21, H*.11), rb = .26*s, yb0 = -.75*s, yb1 = .75*s, lt = .4*s, lw = 1.1*s, wt = .07*s;
+  const B = [], L = [];
+  BX = {s, rb, yb0, yb1, lt, lw, floorY: yb0 + wt};
+  const col = (x, y, z) => (Math.abs(x) < rb || Math.abs(z) < rb) ? yel() : red();
+  const face = (list, cnt, a, y0, y1, cf) => { for(let c=0; c<cnt; c++){
+    const f = (rnd()*4)|0, u = (rnd()*2-1)*a, y = y0 + rnd()*(y1 - y0);
+    const x = f<2 ? u : (f===2 ? a : -a), z = f<2 ? (f ? -a : a) : u;
+    list.push([x, y, z, cf(x, y, z)]); } };
+  // thân hộp: mặt ngoài, mặt trong (sáng dần về đáy), đáy phát sáng, viền miệng, 4 cạnh
+  face(B, Q(900), s, yb0, yb1, col);
+  face(B, Q(380), s - wt, yb0 + wt, yb1, (x, y, z) => { const t = (y - yb0)/(yb1 - yb0);
+    return [255, 70 + 150*(1 - t)*(.6 + .4*rnd()), 40 + 60*(1 - t)]; });
+  for(let c=0; c<Q(250); c++) B.push([(rnd()*2-1)*(s - wt), yb0 + wt, (rnd()*2-1)*(s - wt), [255, 205 + rnd()*40, 100 + rnd()*80]]);
+  for(let c=0; c<Q(320);){ const x = (rnd()*2-1)*s, z = (rnd()*2-1)*s;
+    if(Math.abs(x) < s - wt && Math.abs(z) < s - wt) continue;
+    B.push([x, yb1, z, [255, 215 + rnd()*30, 120 + rnd()*60]]); c++; }
+  for(const a of [-1, 1]) for(const b of [-1, 1]) for(let k=0; k<Q(40); k++)
+    B.push([a*s, yb0 + rnd()*(yb1 - yb0), b*s, [255, 120 + rnd()*60, 110 + rnd()*40]]);
+  // nắp hộp (toạ độ cục bộ: y = 0 là đáy nắp)
+  face(L, Q(260), lw, 0, lt, col);
+  for(let c=0; c<Q(420); c++){ const x = (rnd()*2-1)*lw, z = (rnd()*2-1)*lw; L.push([x, lt, z, col(x, 0, z)]); }
+  for(let c=0; c<Q(150); c++){ const x = (rnd()*2-1)*lw, z = (rnd()*2-1)*lw;
+    L.push([x, 0, z, (Math.abs(x) < rb || Math.abs(z) < rb) ? [230, 170, 40] : [150 + rnd()*40, 10, 24]]); }
+  for(let c=0; c<Q(80); c++){ const e = (rnd()*4)|0, u = (rnd()*2-1)*lw;
+    L.push([e<2 ? u : (e===2 ? lw : -lw), lt, e<2 ? (e ? -lw : lw) : u, [255, 130 + rnd()*60, 110 + rnd()*40]]); }
+  // nơ vàng trên nắp
+  const ky = lt + .1*s, per = Q(120);
+  for(const sg of [-1, 1]) for(const Lp of [[.45, .6, .52, .3], [1.0, .5, .5, .28]]){
+    const dx = sg*Math.cos(Lp[0]), dy = Math.sin(Lp[0]), d = Lp[1]*s, A = Lp[2]*s, Bb = Lp[3]*s;
+    const ccx = dx*d, ccy = ky + dy*d;
+    for(let k=0; k<per; k++){
+      const t = rnd()*TAU, fill = k > per*.81, rr = fill ? Math.sqrt(rnd())*.8 : .85 + .15*rnd();
+      const lx = A*Math.cos(t)*rr, ly = Bb*Math.sin(t)*rr;
+      L.push([ccx + dx*lx - dy*ly, ccy + dy*lx + dx*ly, (rnd()-.5)*.2*s, fill ? [255, 170 + rnd()*40, 40] : yel()]);
+    }
+  }
+  for(let k=0; k<Q(80); k++){
+    const a = rnd()*TAU, b = Math.acos(rnd()*2-1), r = Math.cbrt(rnd())*.2*s;
+    L.push([r*Math.sin(b)*Math.cos(a), ky + r*Math.cos(b), r*Math.sin(b)*Math.sin(a), yel()]);
+  }
+  BX.body = B; BX.lid = L; BX.LL = new Float32Array(L.length*3);
+  L.forEach((p, i) => { BX.LL[i*3] = p[0]; BX.LL[i*3+1] = p[1]; BX.LL[i*3+2] = p[2]; });
+}
+function buildBox(open){
+  const S = Sc();
+  for(const p of BX.body) put(S, p[0], p[1], p[2], p[3]);
+  BX.lidStart = S.n;
+  for(const p of BX.lid) put(S, p[0], BX.yb1 + p[1], p[2], p[3]);
+  return dust(S, open ? 4 : 2);
+}
+
+function buildCake(){
+  const S = Sc(), u = Math.min(W*.42, H*.2), hh = .5*u, y0 = -1.0*u;
+  const R = [u, .74*u, .5*u], yb = [y0, y0 + hh, y0 + 2*hh], top3 = y0 + 3*hh;
+  const tc = [[255, 140, 185], [255, 236, 190], [210, 170, 255]], white = () => [255, 245 + rnd()*10, 245];
+  CAKE = {u, R, yb, hh, top3, candles: []};
+  [900, 680, 500].forEach((n, t) => { for(let k=0; k<Q(n); k++){
+    const a = rnd()*TAU, y = yb[t] + rnd()*hh, v = rnd() < .1 ? white() : tc[t].map(c => Math.min(255, c*(.85 + rnd()*.25)));
+    put(S, R[t]*Math.cos(a), y, R[t]*Math.sin(a), v); } });
+  [120, 90, 60].forEach((n, t) => { for(let k=0; k<Q(n); k++){
+    const a = rnd()*TAU, r = Math.sqrt(rnd())*R[t]; put(S, r*Math.cos(a), yb[t] + hh, r*Math.sin(a), white()); } });
+  [200, 150, 110].forEach((n, t) => { for(let k=0; k<Q(n); k++){
+    const a = rnd()*TAU, r = R[t] + rnd()*3; put(S, r*Math.cos(a), yb[t] + hh, r*Math.sin(a), white()); } });
+  for(let t=0; t<3; t++) for(let k=0; k<14; k++){
+    const a = k*TAU/14 + rnd()*.15, len = (.12 + rnd()*.16)*hh;
+    for(let j=0; j<Q(8); j++) put(S, (R[t] + 1)*Math.cos(a), yb[t] + hh - len*j/(Q(8) - 1), (R[t] + 1)*Math.sin(a), white());
+  }
+  for(let k=0; k<Q(220); k++){ const a = rnd()*TAU, r = 1.2*u + (rnd()-.5)*.06*u;
+    put(S, r*Math.cos(a), y0 - .03*u, r*Math.sin(a), gold()); }
+  for(let c=0; c<5; c++){
+    const a = c*TAU/5 + .3, x = .28*u*Math.cos(a), z = .28*u*Math.sin(a), ch = .34*u;
+    const cc = [[255, 120, 170], [255, 255, 255], [255, 210, 90]][c%3];
+    for(let j=0; j<Q(16); j++) put(S, x, top3 + ch*j/(Q(16) - 1), z, cc);
+    for(let j=0; j<Q(30); j++){ const v = rnd(), w = (1 - v)*.035*u;
+      put(S, x + (rnd()-.5)*2*w, top3 + ch + v*.2*u, z + (rnd()-.5)*2*w, [255, 150 + v*100, 40 + v*60], 0, 1); }
+    CAKE.candles.push({x, y: top3 + ch + .08*u, z});
+  }
+  const pts = sampleText(CFG.title || 'Happy birthday', W*.9, Math.min(W*.2, H*.09), H*.2, Math.floor(N*.2));
+  for(const p of pts) put(S, p[0], p[1] + 1.62*u, 0, gold(), 1);
+  return dust(S);
+}
+
+function layoutPhotos(){
+  const n = Math.min(CFG.photos.length, MAXPH), Rs = CAKE.R, tot = Rs[0] + Rs[1] + Rs[2], c = [0, 0, 0];
+  for(let i=0; i<3; i++) c[i] = Math.floor(n*Rs[i]/tot);
+  for(let i=0, r = n - c[0] - c[1] - c[2]; r > 0; r--, i = (i + 1)%3) c[i]++;
+  PTG = [];
+  for(let t=0; t<3; t++){
+    const side = Math.min(.42*CAKE.u, TAU*Rs[t]/Math.max(c[t], 1)*.8);
+    for(let k=0; k<c[t]; k++) PTG.push({r: Rs[t] + 2, y: CAKE.yb[t] + CAKE.hh/2, ang: k*TAU/c[t] + t*.9, side});
+  }
+  // vòng ảnh bay quanh hộp đã mở
+  const s = BX.s, sideMax = .95*s;
+  let az = Math.min((H*.5 - 90)/1.15, 4.2*s);
+  let ax = Math.min((W*.5 - 10)/1.2 - sideMax*.5, az*1.15);
+  ax = Math.max(ax, s*1.3); az = Math.max(az, ax);
+  const per = PI*(3*(ax + az) - Math.sqrt((3*ax + az)*(ax + 3*az)));
+  RING = {ax, az, n, y: BX.yb1 + 1.5*s, side: Math.min(sideMax, per/Math.max(n, 1)*.82), frozen: 0, frozenT: 0};
+  DT = n <= 8 ? .9 : (n <= 14 ? .65 : .5);
+  T3 = n ? LAUNCH0 + (n - 1)*DT + FLY + 1.5 : 4.5;
+}
+function build(){
+  makeBox();
+  SC = [buildTitle(), buildCard(), buildBox(false), buildBox(true), buildCake()];
+  LIDX.fill(-1); for(let k=0; k<BX.lid.length; k++) LIDX[BX.lidStart + k] = k;
+  PIV = [0, 0, (BX.yb0 + BX.yb1 + BX.lt)/2, BX.yb1, .1*CAKE.u];
+  layoutPhotos();
+}
+
+// ---------- khung hình, kích thước ----------
+function sizeCard(){
+  cardW = Math.min(W*.88, 380); cardH = Math.min(H*.6, 470);
+  const c = $('card'); c.style.width = cardW + 'px'; c.style.height = cardH + 'px'; c.style.top = cy + 'px';
+}
+function resize(){
+  D = Math.min(devicePixelRatio || 1, 2); W = innerWidth; H = innerHeight;
+  cf.width = W*D; cf.height = H*D; fx.setTransform(D, 0, 0, D, 0, 0);
+  PW = Math.round(W); PH = Math.round(H); cp.width = PW; cp.height = PH;
+  img = px.createImageData(PW, PH); buf = img.data; base = new Uint8ClampedArray(buf.length);
+  for(let y=0; y<PH; y++){ const k = y/PH; for(let x=0; x<PW; x++){ const o = (y*PW + x)*4;
+    base[o] = 16 - 10*k; base[o+1] = 8 - 5*k; base[o+2] = 32 - 20*k; base[o+3] = 255; } }
+  cy = H*.5; F = Math.max(W, 360)*2.2; sizeCard(); build();
+}
+
+// ---------- điều khiển các cảnh ----------
+// 0 chữ Happy birthday | 1 thiệp giấy | 2 hộp quà đóng | 3 hộp mở, ảnh bay ra | 4 bánh sinh nhật
+let scene = -1, sceneT0 = 0, now = 0, rot = 0, rotTarget = 0, tilt = .12, pv = 0, t3start = 0, typing = null;
+const TILT = [.12, .12, .42, 1.18, .38], TSP = [.04, .04, .04, .035, .04], ROTV = [.0028, .0028, .004, 0, .0055];
+const KSP = [.05, .06, .045, .05, .04];
+function burst(a){ for(let i=0; i<N*3; i++) P[i] += (rnd() - .5)*a; }
+function go(s){
+  scene = s; sceneT0 = now; const c = $('card');
+  if(s === 1){ setTimeout(() => { if(scene === 1) c.classList.add('on'); }, 500); typing = null; }
+  else c.classList.remove('on');
+  if(s === 3){ rotTarget = Math.round(rot/TAU)*TAU; t3start = now; }
+  if(s === 4){ RING.frozenT = now - t3start; RING.frozen = RING.frozenT*RINGW; }
+  if(s === 0) burst(120); if(s === 1) burst(40); if(s === 2) burst(150); if(s === 4) burst(110);
+  $('again').style.display = s === 4 ? '' : 'none';
+}
+function showWish(){
+  const text = (CFG.wish || '').trim() || 'Chúc bạn sinh nhật thật vui, thật nhiều niềm vui và hạnh phúc!';
+  $('cHead').textContent = CFG.to ? 'Gửi ' + CFG.to : 'Chúc mừng sinh nhật';
+  $('cSig').style.opacity = 0; $('cSig').textContent = CFG.from ? '— ' + CFG.from : '';
+  $('cTs').textContent = ''; $('cTr').textContent = text;
+  const box = $('cText'), T = $('cT'); let fs = 28;
+  for(; fs >= 13; fs--){ box.style.fontSize = fs + 'px'; if(T.offsetHeight <= box.clientHeight) break; }
+  typing = {text, pos: 0, last: now, done: false, doneAt: 0, step: Math.max(.02, Math.min(.07, 5/text.length)),
+            wait: 2.5 + clamp(text.length/60, 0, 5)};
+}
+function cardTick(){
+  if(scene !== 1) return;
+  if(!typing){ if(now - sceneT0 > 1.6) showWish(); return; }
+  const T = typing;
+  if(!T.done){
+    while(now - T.last >= T.step && T.pos < T.text.length){ T.pos++; T.last += T.step; }
+    $('cTs').textContent = T.text.slice(0, T.pos); $('cTr').textContent = T.text.slice(T.pos);
+    if(T.pos >= T.text.length){ T.done = true; T.doneAt = now; $('cSig').style.opacity = 1; }
+  } else if(now - T.doneAt > T.wait) go(2);
+}
+// Chạm vào bất kỳ chỗ nào trên màn hình để sang cảnh kế tiếp (các cảnh vẫn tự chạy nếu không chạm).
+// Riêng thiệp: chạm lần 1 hiện hết lời chúc, chạm lần 2 mới sang cảnh sau, để người nhận kịp đọc.
+let lastTap = 0;
+function nextScene(){
+  if(scene < 0 || scene >= 4) return;                      // chưa bắt đầu, hoặc đã ở cảnh cuối
+  const t = performance.now()/1000;
+  if(t - Math.max(sceneT0, lastTap) < .6) return;          // chặn chạm dồn dập làm nhảy qua 2 cảnh
+  lastTap = t;
+  if(scene === 1){
+    if(!typing) showWish();
+    if(!typing.done){ typing.pos = typing.text.length; return; }
+  }
+  go(scene + 1);
+}
+document.addEventListener('click', e => { if(!e.target.closest('button')) nextScene(); });
+$('again').onclick = () => location.reload();
+
+// ---------- vẽ ----------
+function proj(x, y, z){
+  const yy = y - pv, z0 = -x*SN + z*CS;
+  const Z = -yy*ST + z0*CT, s = F/(F + Z);
+  return [W/2 + (x*CS + z*SN)*s, cy - (yy*CT + z0*ST)*s, Z, s];
+}
+function frame(){
+  now = performance.now()/1000;
+  const el = now - sceneT0;
+  if(scene === 0 && el > 6.2) go(1);
+  else if(scene === 2 && el > 5.6) go(3);
+  else if(scene === 3 && el > T3) go(4);
+  cardTick();
+  if(scene === 2){
+    if(el < 3.2) rot += ROTV[2]; else { if(el - 1/60 < 3.2) rotTarget = Math.round(rot/TAU)*TAU; rot += (rotTarget - rot)*.04; }
+  } else if(scene === 3) rot += (rotTarget - rot)*.04;
+  else rot += ROTV[scene];
+  tilt += (TILT[scene] - tilt)*TSP[scene]; pv += (PIV[scene] - pv)*.05;
+  CS = Math.cos(rot); SN = Math.sin(rot); CT = Math.cos(tilt); ST = Math.sin(tilt);
+  const cs = CS, sn = SN, ct = CT, st = ST, Rd = W*.3;
+  // góc mở của nắp hộp
+  let th = 0;
+  if(scene === 3) th = LID_OPEN*easeBack(clamp((el - .2)/1.5, 0, 1));
+  else if(scene === 2 && el > 4.3) th = .06*Math.sin((el - 4.3)*30)*Math.min(1, el - 4.3);
+  const cT = Math.cos(th), sT = Math.sin(th);
+  const dynBox = scene === 2 || scene === 3, S = SC[scene], k0 = KSP[scene];
+  const hz = BX.lw, yb1 = BX.yb1, LL = BX.LL, sB = BX.s, fy = BX.floorY;
+  buf.set(base);
+  const T = S.T, CT_ = S.C, FT = S.F, KT = S.K;
+  for(let i=0; i<N; i++){
+    const o = i*3, k = k0*(.6 + .8*R2[i]), kd = KT[i];
+    let tx = T[o], ty = T[o+1], tz = T[o+2], am = kd === 2 ? .45 : .9;
+    if(dynBox){
+      const li = LIDX[i];
+      if(li >= 0){ const q = li*3, rz = LL[q+2] - hz, ly = LL[q+1];
+        tx = LL[q]; ty = yb1 + ly*cT - rz*sT; tz = hz + rz*cT + ly*sT; }
+      else if(scene === 3 && kd === 4){
+        const u = (now*(.16 + .2*R2[i]) + PHs[i]*.159)%1, ang = PHs[i]*7 + now*.25, rr = sB*(.15 + 1.3*u*(.4 + .6*R2[i]));
+        tx = Math.cos(ang)*rr; tz = Math.sin(ang)*rr; ty = fy + u*sB*4.5;
+        am = 1.1*Math.sin(PI*u)*clamp((el - .6)/1, 0, 1);
+      }
+    }
+    P[o] += (tx - P[o])*k; P[o+1] += (ty - P[o+1])*k; P[o+2] += (tz - P[o+2])*k;
+    CC[o] += (CT_[o] - CC[o])*.05; CC[o+1] += (CT_[o+1] - CC[o+1])*.05; CC[o+2] += (CT_[o+2] - CC[o+2])*.05;
+    FXC[i] += (FT[i] - FXC[i])*.07;
+    let x = P[o], y = P[o+1], z = P[o+2];
+    if(kd === 1){ x += Math.sin(now*14 + PHs[i]*5)*1.6; y += Math.sin(now*19 + PHs[i]*3)*2.2; }
+    const yy = y - pv, x1 = x*cs + z*sn, z0 = -x*sn + z*cs, y1 = yy*ct + z0*st, z1 = -yy*st + z0*ct, f = FXC[i];
+    const Z = z1 + (z - z1)*f, X = x1 + (x - x1)*f, Y = y1 + (y - y1)*f, s = F/(F + Z);
+    const ix = (W/2 + X*s)|0, iy = (cy - Y*s)|0;
+    if(ix < 1 || iy < 1 || ix >= PW - 1 || iy >= PH - 1) continue;
+    let dep = .45 + .55*Math.max(0, Math.min(1, (Rd - Z)/(2*Rd))); dep += (1 - dep)*f;
+    const a = dep*(.62 + .38*Math.sin(now*2.5 + PHs[i]))*am;
+    const r = CC[o]*a, g = CC[o+1]*a, b = CC[o+2]*a, q = (iy*PW + ix)*4;
+    buf[q] += r; buf[q+1] += g; buf[q+2] += b;
+    const r2 = r*.35, g2 = g*.35, b2 = b*.35;
+    buf[q-4] += r2; buf[q-3] += g2; buf[q-2] += b2; buf[q+4] += r2; buf[q+5] += g2; buf[q+6] += b2;
+    const u2 = q - PW*4, v2 = q + PW*4;
+    buf[u2] += r2; buf[u2+1] += g2; buf[u2+2] += b2; buf[v2] += r2; buf[v2+1] += g2; buf[v2+2] += b2;
+  }
+  px.putImageData(img, 0, 0);
+  fx.clearRect(0, 0, W, H);
+  if(scene === 3){ drawOpenGlow(el); drawPhotos(el); }
+  else if(scene === 4){ drawPhotos(el); drawCandles(el); }
+  requestAnimationFrame(frame);
+}
+
+function glow(x, y, z, r, alpha, rgb){
+  const v = proj(x, y, z), R = r*v[3], g = fx.createRadialGradient(v[0], v[1], 0, v[0], v[1], R);
+  g.addColorStop(0, `rgba(${rgb},${alpha})`); g.addColorStop(1, `rgba(${rgb},0)`);
+  fx.fillStyle = g; fx.fillRect(v[0] - R, v[1] - R, 2*R, 2*R);
+}
+function drawOpenGlow(el){
+  const a = clamp((el - .3)/1.2, 0, 1), s = BX.s;
+  glow(0, BX.yb1 - .2*s, 0, 1.7*s, .3*a*(.85 + .15*Math.sin(now*5)), '255,170,60');
+  for(let j=0; j<RING.n; j++){
+    const d = el - (LAUNCH0 + j*DT);
+    if(d > 0 && d < .6) glow(0, BX.yb1 + .3*s, 0, 1.9*s, .45*(1 - d/.6), '255,235,170');
+  }
+}
+function ringPos(j, rr, tt){
+  const a = j*TAU/RING.n + rr;
+  return [RING.ax*Math.cos(a), RING.y + .1*BX.s*Math.sin(tt*1.7 + j), RING.az*Math.sin(a)];
+}
+function drawPhotos(el){
+  const items = [], s = BX.s;
+  for(let j=0; j<RING.n; j++){
+    if(!frames[j]) continue;
+    let pos, side, fac = 1, alpha = 1, rotA = ((j*37)%21 - 10)*.022;
+    if(scene === 3){
+      const L = LAUNCH0 + j*DT; if(el < L) continue;
+      const p = clamp((el - L)/FLY, 0, 1), e = easeOut(p), tg = ringPos(j, el*RINGW, el), y0 = BX.floorY + .3*s;
+      pos = [tg[0]*e, y0 + (tg[1] - y0)*e + Math.sin(PI*p)*1.5*s, tg[2]*e];
+      side = RING.side*(.2 + .8*e); alpha = Math.min(1, p*4);
+    } else {
+      const p = clamp((el - .5 - j*.2)/1.8, 0, 1), e = easeOut(p), a0 = ringPos(j, RING.frozen, RING.frozenT), tg = PTG[j];
+      const tx = tg.r*Math.cos(tg.ang), tz = tg.r*Math.sin(tg.ang);
+      pos = [a0[0] + (tx - a0[0])*e, a0[1] + (tg.y - a0[1])*e + Math.sin(PI*e)*.5*CAKE.u, a0[2] + (tz - a0[2])*e];
+      const nx = Math.cos(tg.ang), nz = Math.sin(tg.ang), facT = -(-nx*SN + nz*CS)*CT;
+      fac = 1 + (facT - 1)*e*e; side = RING.side + (tg.side - RING.side)*e; alpha = Math.min(1, el*2); rotA *= (1 - e);
+    }
+    if(fac < .05) continue;
+    const v = proj(pos[0], pos[1], pos[2]), h = side*v[3];
+    items.push({j, X: v[0], Y: v[1], Z: v[2], w: h*fac, h, a: alpha*Math.min(1, .45 + .55*fac), r: rotA});
+  }
+  items.sort((a, b) => b.Z - a.Z);
+  for(const it of items){
+    fx.save(); fx.translate(it.X, it.Y); fx.rotate(it.r); fx.globalAlpha = it.a;
+    fx.drawImage(frames[it.j], -it.w/2, -it.h/2, it.w, it.h); fx.restore();
+  }
+  fx.globalAlpha = 1;
+}
+function drawCandles(el){
+  if(el < 1.5) return;
+  const gA = Math.min(1, (el - 1.5)/1.5);
+  for(const c of CAKE.candles) glow(c.x, c.y, c.z, 22, .55*(.75 + .25*Math.sin(now*11 + c.x))*gA, '255,200,90');
+}
+
+function loadPhotos(){
+  frames = [];
+  CFG.photos.slice(0, MAXPH).forEach((name, j) => {
+    const im = new Image();
+    im.onload = () => {
+      const S = 220, c = document.createElement('canvas'); c.width = c.height = S;
+      const g = c.getContext('2d');
+      g.shadowColor = 'rgba(0,0,0,.4)'; g.shadowBlur = 8; g.fillStyle = '#fff3c4'; g.fillRect(8, 8, S - 16, S - 16);
+      g.shadowBlur = 0; g.strokeStyle = '#ffd60a'; g.lineWidth = 4; g.strokeRect(10, 10, S - 20, S - 20);
+      const m = Math.min(im.width, im.height), b = 24;
+      g.drawImage(im, (im.width - m)/2, (im.height - m)/2, m, m, b, b, S - 2*b, S - 2*b);
+      frames[j] = c;
+    };
+    im.src = (window.PHOTO_BASE || '/p/') + encodeURIComponent(name);
+  });
+}
+function showMsg(t){ const m = $('msg'); m.textContent = t; m.style.display = 'flex'; $('ui').style.display = 'none'; }
+
+async function start(){
+  if(window.STATIC_CARD){ CFG = Object.assign(CFG, window.STATIC_CARD); }
+  else{
+    const m = location.pathname.match(/^\/c\/([\w-]+)/);
+    if(!m){ showMsg('Không tìm thấy thiệp. Hãy kiểm tra lại link nhé.'); return; }
+    try{
+      const r = await fetch('/api/card/' + m[1]); if(!r.ok) throw 0;
+      CFG = Object.assign(CFG, await r.json());
+    }catch(e){ showMsg('Không tìm thấy thiệp này. Hãy kiểm tra lại link nhé.'); return; }
+  }
+  CFG.title = CFG.title || 'Happy birthday'; CFG.photos = (CFG.photos || []).slice(0, MAXPH);
+  resize(); loadPhotos();
+  for(let i=0; i<N*3; i++) P[i] = (rnd() - .5)*(i%3 === 1 ? H : W)*1.5;
+  CC.set(SC[0].C);
+  now = performance.now()/1000; go(0);
+  const dbg = +(new URLSearchParams(location.search).get('scene') || 0); if(dbg) go(dbg);
+  frame();
+}
+addEventListener('resize', () => { if(W) resize(); });
+start();
+</script></body></html>
